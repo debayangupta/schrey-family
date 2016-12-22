@@ -1,11 +1,94 @@
 <!DOCTYPE HTML>
+<html>
 <head>
-	<meta charset="utf-8">
+
+  <meta charset="utf-8">
   <title>Schrey Family Website</title>
+  
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Tangerine"> 
+  <style>
+body {
+  text-align:center;
+  margin:0; padding:0;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:16px;
+}
+body>div {
+  margin:0px auto;
+  width:80vw;
+}
+
+nav {
+  position:absolute;
+  background:rgba(0,0,0,0.4);
+  height:75px;
+  width:100%;
+}
+nav a {
+  text-decoration:none;
+  color:white;
+}
+#nav-home {
+  font-size:55px;
+  line-height:70px;
+  float:left;
+  margin-left:10px;
+}
+
+header {
+  background-image:url('v2.jpg');
+  background-attachment:fixed;
+  background-position:center center;
+  background-size:cover;
+  margin:0; padding:0;
+  height:100vh;
+}
+h1 {
+  display: inline-block;
+  position: relative;
+  top: 50%;transform: translateY(-5vw);
+  color:orange;
+  /**/text-shadow:0 0 40px 15px black;/**/
+  font-size: 5vw;
+  font-family: 'Tangerine', serif;
+}
+
+#about {
+  height:100vh;
+  background:white;
+}
+  </style>
+  
+  <script type="text/javascript">
+/** /
+$(function() {
+  // fade navbar in/out
+  $(document).scroll(function(){
+    if ($(this).scrollTop() > 100) {
+        $('.navbar').addClass("mod-nav");
+    } else {
+        $('.navbar').removeClass("mod-nav");
+    }
+  });
+  $(document).trigger('scroll'); // in case someone opens a # directly
+});
+/**/
+  </script>
 </head>
 <body>
 
-<h1>Test</h1>
+<nav>
+<a href="#" id="nav-home">Schrey</a>
+
+</nav>
+
+<header>
+<h1>Die Familie Schrey</h1>
+</header>
+
+<div id="about">
+
+</div>
 
 </body>
 </html>
