@@ -1,11 +1,11 @@
-<!DOCTYPE HTML>
+﻿<!DOCTYPE HTML>
 <html>
 <head>
 
   <meta charset="utf-8">
   <title>Schrey Family Website</title>
   
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Tangerine"> 
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Tangerine">
   <style>
 body {
   text-align:center;
@@ -19,14 +19,18 @@ body>div {
 }
 
 nav {
-  position:absolute;
-  background:rgba(0,0,0,0.4);
+  position:fixed;
+  top:0;left:0;
+  background-color:rgba(0,0,0,1);
   height:75px;
   width:100%;
 }
 nav a {
   text-decoration:none;
   color:white;
+}
+nav.mod-nav {
+	
 }
 #nav-home {
   font-size:55px;
@@ -36,7 +40,7 @@ nav a {
 }
 
 header {
-  background-image:url('v2.jpg');
+  background-image:url('v0.jpg');
   background-attachment:fixed;
   background-position:center center;
   background-size:cover;
@@ -46,10 +50,10 @@ header {
 h1 {
   display: inline-block;
   position: relative;
-  top: 50%;transform: translateY(-5vw);
-  color:orange;
-  /**/text-shadow:0 0 40px 15px black;/**/
-  font-size: 5vw;
+  top: 50%;transform: translateY(-6vw);
+  color:black;
+  /**/text-shadow:0 0 40px 15px white;/**/
+  font-size: 6vw;
   font-family: 'Tangerine', serif;
 }
 
@@ -58,16 +62,16 @@ h1 {
   background:white;
 }
   </style>
-  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script type="text/javascript">
-/** /
+/**/
 $(function() {
   // fade navbar in/out
   $(document).scroll(function(){
     if ($(this).scrollTop() > 100) {
-        $('.navbar').addClass("mod-nav");
+        $('#navbar').addClass("mod-nav");
     } else {
-        $('.navbar').removeClass("mod-nav");
+        $('#navbar').removeClass("mod-nav");
     }
   });
   $(document).trigger('scroll'); // in case someone opens a # directly
@@ -77,9 +81,8 @@ $(function() {
 </head>
 <body>
 
-<nav>
+<nav id="navbar">
 <a href="#" id="nav-home">Schrey</a>
-
 </nav>
 
 <header>
