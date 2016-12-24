@@ -1,0 +1,97 @@
+﻿/*--------------------------------------------------*/
+body {
+  text-align:center;
+  margin:0; padding:0;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:16px;
+}
+body>div {
+  margin:0px auto;
+  width:1200px; min-width:1200px;
+  height:100vh;
+  background:#CCC;
+}
+
+/*--------------------------------------------------*/
+nav {
+  position:fixed;
+  top:0;left:0;
+  background-color:rgba(0,0,0,1);
+  height:75px;
+  width:100%;
+  z-index:2;
+  transition:background-color 2s;
+  overflow:hidden;
+}
+nav>div {
+  width:1000px;height:100%;
+  margin:0px auto;
+}
+nav a {
+  text-decoration:none;
+  color:white;
+  line-height:75px;
+  font-size:20px;
+  float:left;
+}
+nav.mod-nav {
+	background-color:rgba(0,0,0,1);
+}
+#nav-home {
+  font-size:55px;
+  margin:0px 10px;
+}
+nav>div>a {
+  display:inline-block;
+  font-weight:bold;
+  border-left:2px red dashed;
+  border-right:2px red dashed;
+  margin-left:-2px;
+  width:196px;
+}
+nav>div>a:first-child {
+  border-left:2px red dashed;
+  margin-left:0;
+}
+nav>div>a:hover {
+	background:gold;
+	color:black;
+}
+nav>div>a.current {
+	text-decoration:underline;
+}
+/** /nav>div>a.current:before {content:"[";}
+nav>div>a.current:after {content:"]";}/**/
+
+/*--------------------------------------------------*/
+header {
+  background-attachment:fixed;
+  background-position:center center;
+  background-size:cover;
+  margin:0; padding:0;
+  height:100vh;
+}
+h1 {
+  display: inline-block;
+  position: relative;
+  top: 50%;transform: translateY(-6vw);
+  color:black;
+  /**/text-shadow:0px 0px 40px white, 0px 0px 20px white;/**/
+  font-size: 6vw;
+  font-family: 'Tangerine', serif;
+}
+#scroll-suggest {
+  position: absolute; bottom: 10px; z-index: 1;
+  left:50%;transform:translateX(-50%);
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color:black;
+  /** /background:radial-gradient(circle farthest-side at center bottom, rgba(255,255,255,0.5), rgba(0,0,0,0)); /* w3c */
+}
+#scroll-suggest span {
+  display:block;
+  font-size: 20px;
+}
+
+/*--------------------------------------------------*/
