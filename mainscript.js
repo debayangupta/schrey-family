@@ -23,7 +23,7 @@ $(function() {
   $(document).trigger('scroll'); // in case someone opens a # directly
   $('#navbar>div>a').each(function(){
   	console.log(document.location+'=='+this.href);
-  	if(document.location == this.href) {
+  	if(document.location == this.href || document.location+'index.html' == this.href) {
 	  	$(this).addClass('current');
 	  	$('header').css("background-image","url('images/"+this.innerHTML+".jpg')");
 	  }
