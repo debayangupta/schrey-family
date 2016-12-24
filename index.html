@@ -18,6 +18,7 @@ body {
 body>div {
   margin:0px auto;
   width:80vw;
+  min-width:1000px;
 }
 
 /*--------------------------------------------------*/
@@ -28,22 +29,22 @@ nav {
   height:75px;
   width:100%;
   z-index:2;
+  transition:background-color 2s;
   overflow:hidden;
 }
 nav>div {
-  width:1000px;
+  width:1000px;height:100%;
   margin:0px auto;
-  height:100%;
 }
 nav a {
   text-decoration:none;
   color:white;
-  line-height:75px;
+  line-height:75px;width:196px;
   font-size:20px;
   float:left;
 }
 nav.mod-nav {
-	height:75px;
+	background-color:rgba(0,0,0,1);
 }
 #nav-home {
   font-size:55px;
@@ -51,12 +52,18 @@ nav.mod-nav {
 }
 nav>div>a {
   display:inline-block;
-  width:140px;
   font-weight:bold;
+  border-left:2px red dashed;
+  border-right:2px red dashed;
+  margin-left:-2px;
+}
+nav>div>a:first-child {
+  border-left:2px red dashed;
+  margin-left:0;
 }
 nav>div>a:hover {
-	background:red;
-	color:gold;
+	background:gold;
+	color:black;
 }
 
 /*--------------------------------------------------*/
@@ -76,6 +83,12 @@ h1 {
   /**/text-shadow:0px 0px 40px white, 0px 0px 20px white;/**/
   font-size: 6vw;
   font-family: 'Tangerine', serif;
+}
+#scroll-suggest {
+  position: absolute; bottom: 0; z-index: 2;
+  display: block; color: #DDD;
+  width: 100%; text-align: center;
+  font-size: 30px; line-height: 30px;
 }
 
 /*--------------------------------------------------*/
@@ -106,13 +119,17 @@ $(function() {
 <nav id="navbar">
 <a href="#" id="nav-home">Schrey</a>
 <div>
-	<a href="#fabian">Fabian</a>
-	<a href="#falk">Falk</a>
+	<a href="index.html">Home</a>
+	<a href="history.html">History</a>
+	<a href="family-tree.html">Family Tree</a>
+	<a href="current-members.html">Current Members</a>
+	<a href="contact.html">Contact</a>
 </div>
 </nav>
 
 <header>
 <h1>Die Familie Schrey</h1>
+<div id="scroll-suggest">&#x25BC;</div>
 </header>
 
 <div id="about">
