@@ -9,7 +9,6 @@ body>div {
   margin:0px auto;
   width:1200px; min-width:1200px;
   height:100vh;
-  background:#CCC;
 }
 
 /*--------------------------------------------------*/
@@ -95,3 +94,33 @@ h1 {
 }
 
 /*--------------------------------------------------*/
+
+#introduction {
+	background-image:url('images/imgs.jpg');
+	background-position:600px 0px;
+	background-repeat:no-repeat;
+	background-size:contain;
+}
+.halftext{
+  float:left;
+  display:block;
+  text-align:justify;
+  width:44%;
+  padding:80px 3% 0px 3%;
+  background-image:url('images/flourish.png');
+  background-position:center 12px;
+  background-repeat:no-repeat;
+  background-origin:border-box;
+}
+
+#introduction p:first-child {
+	font-family: 'Tangerine', serif;
+	font-size: 50px;
+	color:#99CC00;
+	margin-top:0px;
+	margin-bottom:0px;
+} 
+
+
+/*--------------------------------------------------*/
+
